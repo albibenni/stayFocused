@@ -5,11 +5,25 @@ import (
 	"runtime"
 )
 
-func main() {
+func amIWindows() bool {
 	if runtime.GOOS == "windows" {
+		return true
+	}
+	return false
+}
+
+func amIMacOS() bool {
+	if runtime.GOOS == "darwin" {
+		return true
+	}
+	return false
+}
+
+func main() {
+	if amIWindows() {
 		fmt.Println("Hello from Windows")
 	}
-	if runtime.GOOS == "darwin" {
+	if amIMacOS() {
 		fmt.Println("Hello from Mac")
 	}
 }
