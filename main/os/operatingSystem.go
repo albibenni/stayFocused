@@ -1,7 +1,6 @@
-package main
+package os
 
 import (
-	"fmt"
 	"runtime"
 )
 
@@ -17,13 +16,4 @@ func amIMacOS() bool {
 		return true
 	}
 	return false
-}
-
-func main() {
-	if amIWindows() {
-		fmt.Println("Hello from Windows")
-	}
-	if amIMacOS() {
-		fmt.Println("Hello from Mac")
-	}
 }
